@@ -1,0 +1,37 @@
+name: ChatPlusPlus
+version: ${project.version}
+main: to.us.ravinesquaad.plugins.chatplusplus.ChatPlusPlus
+api-version: 1.16
+prefix: "[ Chat++ ]"
+authors: [ Meechapooch ]
+description: Advanced Minecraft Private Chat, with in game DM's and group convos
+website: ravinesquaad.us.to
+commands:
+  dm:
+    aliases:
+      - chat
+      - c
+      - w
+      - whisper
+      - dm
+      - message
+      - msg
+      - send
+      - to
+      - talk
+    description: "Privately message a player or existing group"
+    usage: "/dm <player name> <message>"
+
+  respond:
+    aliases:
+      - respond
+      - r
+    description: "Respond to last group or player who sent a message to you"
+
+  group:
+    aliases:
+      - group
+      - party
+      - groupchat
+    description: "Create a group chat or add/delete members of a current one"
+    usage: /group <group name> [remove | add] <players>
