@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>to.us.ravinesquaad.plugins</groupId>
+    <groupId>io.github.meechapooch.chatplusplus</groupId>
     <artifactId>chat-plus-plus</artifactId>
     <version>1.3-INDEV</version>
     <packaging>jar</packaging>
@@ -16,7 +16,7 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <url>ravinesquaad.us.to</url>
+    <url>https://github.com/meechapooch/ChatPlusPlus-bukkit</url>
 
     <build>
         <plugins>
