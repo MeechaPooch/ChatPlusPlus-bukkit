@@ -1,11 +1,11 @@
 name: ChatPlusPlus
 version: ${project.version}
-main: to.us.ravinesquaad.plugins.chatplusplus.ChatPlusPlus
+main: io.github.meechapooch.chatplusplus.ChatPlusPlus
 api-version: 1.16
 prefix: "[ Chat++ ]"
 authors: [ Meechapooch ]
 description: Advanced Minecraft Private Chat, with in game DM's and group convos
-website: ravinesquaad.us.to
+website: https://github.com/meechapooch/ChatPlusPlus-bukkit
 commands:
   dm:
     aliases:
@@ -27,6 +27,7 @@ commands:
       - respond
       - r
     description: "Respond to last group or player who sent a message to you"
+    usage: "/respond <message>"
 
   group:
     aliases:
@@ -34,4 +35,4 @@ commands:
       - party
       - groupchat
     description: "Create a group chat or add/delete members of a current one"
-    usage: /group <group name> [remove | add] <players>
+    usage: "/group <group name> [remove | add] <players>"

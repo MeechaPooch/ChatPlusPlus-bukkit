@@ -1,7 +1,11 @@
-package to.us.ravinesquaad.plugins.chatplusplus;
+package io.github.meechapooch.chatplusplus;
 
+import io.github.meechapooch.chatplusplus.commands.DMCommand;
+import io.github.meechapooch.chatplusplus.commands.GroupCommand;
+import io.github.meechapooch.chatplusplus.commands.RespondCommand;
+import io.github.meechapooch.chatplusplus.commands.completers.DMCompleter;
+import io.github.meechapooch.chatplusplus.commands.completers.GroupCompleter;
 import org.bukkit.entity.Player;
-import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
@@ -11,12 +15,12 @@ public final class ChatPlusPlus extends JavaPlugin {
 
     //TODO Add clickable player and group chat names which auto begin commands to send messages
 
-    public static HashMap<Player,PlayerProfile> profiles = new HashMap<>();
-    static ChatPlusPlus instance;
     public static final boolean debug = true;
+    public static HashMap<Player, PlayerProfile> profiles = new HashMap<>();
+    public static ChatPlusPlus INSTANCE;
 
     public ChatPlusPlus() {
-        instance = this;
+        INSTANCE = this;
     }
 
     @Override
@@ -24,7 +28,7 @@ public final class ChatPlusPlus extends JavaPlugin {
         System.out.println("PLUGIN INABLING!!!!!!!!!!!!!!!!!!!!! BRUUUUUUUUUUUUHHHHH");
         UUIDManager.init();
         ProfileMap.init();
-        getServer().getPluginManager().registerEvents(new OnJoin(),this);
+        getServer().getPluginManager().registerEvents(new PlayerJoinHandler(), this);
 
 
         getCommand("dm").setExecutor(new DMCommand());
